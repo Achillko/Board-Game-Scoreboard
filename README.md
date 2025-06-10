@@ -10,7 +10,7 @@ A simple Android app to keep track of board game scores—perfect for when you d
 
 ## Who Is It For?
 
-Originally built for a family member, this app is for anyone who enjoys board games and wants a quick, reliable way to keep score.
+This app is for anyone who enjoys board games and wants a quick, reliable way to keep score.
 
 ## Getting Started
 
