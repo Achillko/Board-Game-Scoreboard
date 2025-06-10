@@ -21,6 +21,7 @@ class MainActivity: AppCompatActivity(){
             val score = playerView.findViewById<TextView>(R.id.playerScore)
             val btn1 = playerView.findViewById<Button>(R.id.btnAdd1)
             val btn5 = playerView.findViewById<Button>(R.id.btnAdd5)
+            val btn10 = playerView.findViewById<Button>(R.id.btnAdd10)
             val btnReset = playerView.findViewById<Button>(R.id.btnReset)
 
             name.text = "Joueur $i"
@@ -34,6 +35,11 @@ class MainActivity: AppCompatActivity(){
             btn5.setOnClickListener {
                 val current = score.text.toString().toInt()
                 score.text = (current + 5).toString()
+            }
+
+            btn10.setOnClickListener {
+                val current = score.text.toString().toInt()
+                score.text = (current + 10).toString()
             }
 
             btnReset.setOnClickListener {
