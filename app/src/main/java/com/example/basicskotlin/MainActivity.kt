@@ -12,9 +12,10 @@ class MainActivity: AppCompatActivity(){
         setContentView(R.layout.activity_main)
 
         val container = findViewById<LinearLayout>(R.id.playersContainer)
-        val playerCount = intent.getIntExtra("playerCount", 1)
+        val playerNames = intent.getStringArrayListExtra("playerNames") ?: arrayListOf("Joueur 1")
+        val playerCount = playerNames.size
 
-        for (i in 1..playerCount) {
+        for (i in 0 until playerCount) {
             val playerView = layoutInflater.inflate(R.layout.player_block, container, false)
 
             val name = playerView.findViewById<TextView>(R.id.playerName)
@@ -24,7 +25,7 @@ class MainActivity: AppCompatActivity(){
             val btn10 = playerView.findViewById<Button>(R.id.btnAdd10)
             val btnReset = playerView.findViewById<Button>(R.id.btnReset)
 
-            name.text = "Joueur $i"
+            name.text = playerNames[i]
             score.text = "0"
 
             btn1.setOnClickListener {

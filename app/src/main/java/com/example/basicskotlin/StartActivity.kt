@@ -31,7 +31,7 @@ class StartActivity : AppCompatActivity() {
             .setView(numberPicker)
             .setPositiveButton("Valider") { _, _ ->
                 val count = numberPicker.value
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, PlayerNameInputActivity::class.java)
                 intent.putExtra("playerCount", count)
                 startActivity(intent)
             }
